@@ -15,14 +15,14 @@ public class Main {
         System.out.print("How many kilometers will be traveled : ");
         km = scan.nextDouble();
 
-        price = openingFee + (km * kmPrice);
+        price = openingFee + km * kmPrice;
+        price = (price < 20) ? 20 : price;
 
-        if (price < 20) {
-            System.out.println("The amount you will pay: 20");
-        }
-        else {
-            System.out.println("The amount you will pay: " + df.format(price));
-        }
+        System.out.println("Total price : " + df.format(price));
+
+
+
+
 
 
         }
